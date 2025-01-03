@@ -1,0 +1,442 @@
+div#jeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:yellow;
+}
+div#dwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:yellow;
+}
+div#trzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color:antiquewhite;
+    background-color: brown;
+    position: absolute;
+    border-color:yellow;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+body{
+
+    background-image:url(orion-nebula-gd6f14dd68_1920.jpg);
+    background-repeat: no-repeat;
+}
+img{
+    border-bottom-left-radius: 10%;
+    width: 400px;
+    height: 300px;
+    border-bottom-right-radius: 10%;
+}
+
+div#merkuryjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:grey;
+}
+div#merkurydwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:grey;
+}
+div#merkurytrzy{
+    font-family: 'Courier New', Courier, monospace;
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: azure;
+    background-color: lightslategray;
+    position: absolute;
+    border-color:white; 
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    
+}
+div#wenusjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:orangered;
+}
+div#wenusdwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:orangered;
+}
+div#wenustrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: lightgoldenrodyellow;
+    background-color: tomato;
+    position: absolute;
+    border-color:orangered;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+div#ziemiajeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:blue;
+}
+div#ziemiadwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:blue;
+}
+div#ziemiatrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: whitesmoke;
+    background-color: darkblue;
+    position: absolute;
+    border-color:green;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+div#marsjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:darkred;
+}
+div#marsdwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:darkred;
+}
+div#marstrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: lightsalmon;
+    background-color: darkred;
+    position: absolute;
+    border-color:darkred;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+div#Jowiszjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:gray;
+}
+div#Jowiszdwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:gray;
+}
+div#Jowisztrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: beige;
+    background-color: goldenrod;
+    position: absolute;
+    border-color:darkslategray;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div#Saturnjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:gray;
+}
+div#Saturndwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:gray;
+}
+div#Saturntrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: darkgoldenrod;
+    background-color: beige;
+    position: absolute;
+    border-color:darkslategray;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+div#Uranjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:cyan;
+}
+div#Urandwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:cyan;
+}
+div#Urantrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: darkblue;
+    background-color: lightblue;
+    position: absolute;
+    border-color:cyan;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+
+div#Neptunjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:darkblue;
+}
+div#Neptundwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:darkblue;
+}
+div#Neptuntrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: lightblue;
+    background-color: darkblue;
+    position: absolute;
+    border-color:blue;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+div#Plutonjeden{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color:slategray;
+}
+div#Plutondwa{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+   left: 0px;
+    background-color:black;   
+    border: white;
+    border-style: solid;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color:slategray;
+}
+div#Plutontrzy{
+    align-self: center;
+    left: 31%;
+    top: 200px;
+    width: 700px;
+    height: 700px;
+    color: indianred;
+    background-color: whitesmoke;
+    position: absolute;
+    border-color:slategray;
+    border-style: ridge;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospac%;
+}
