@@ -1,4 +1,4 @@
-# School
+# School-Projects
 This repository contains my programming projects for school assignments.
 Each project is organized by programming language for easier navigation.
 
