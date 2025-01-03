@@ -1,0 +1,96 @@
+using System;
+using System.Collections;
+
+class Program
+{
+    // Check if the number is prime
+    bool IsPrime(int n)
+    {
+        for (int i = 2; i < n; i++)
+        {
+            if (n % i == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Calculate the sum of digits of a number
+    int SumOfDigits(int n)
+    {
+        int sum = 0;
+        while (n > 0)
+        {
+            sum += n % 10;
+            n /= 10;
+        }
+        return sum;
+    }
+
+    // Calculate the "weight" of a number (reduced to a single digit)
+    int DigitWeight(int n)
+    {
+        while (n >= 10) 
+        {
+            n = SumOfDigits(n);
+        }
+        return n; 
+    }
+
+    static void Main(string[] args)
+    {
+        string[] file = System.IO.File.ReadAllLines(@"C:\Users\uczen\Desktop\numbers_example.txt");
+
+        StreamWriter result = new(@"C:\Users\uczen\Desktop\results4_1.txt");
+        ArrayList list = new ArrayList();
+
+        // Read numbers from the file and add to the list
+        foreach (string item in file)
+        {
+            list.Add(int.Parse(item));
+        }
+        result.WriteLine("Task 4.1\n\n");
+
+        // Task 4.1: Find all prime numbers between 100 and 5000
+        foreach (int item in list)
+        {
+            if (item >= 100 && item <= 5000 && IsPrime(item))
+            {
+                result.WriteLine(item);
+            }
+        }
+        result.WriteLine("\n");
+
+        string[] primes = System.IO.File.ReadAllLines(@"C:\Users\uczen\Desktop\prime_example.txt");
+        result.WriteLine("Task 4.2\n\n");
+
+        // Task 4.2: Find prime numbers that remain prime when reversed
+        foreach (string prime in primes)
+        {
+            char[] reversed = prime.ToCharArray();
+            Array.Reverse(reversed);
+            Console.WriteLine();
+
+            if (IsPrime(int.Parse(prime)) && IsPrime(int.Parse(string.Join("", reversed))))
+            {
+                result.WriteLine(prime);
+            }
+        }
+
+        result.WriteLine();
+        result.WriteLine("Task 4.3\n");
+
+        // Task 4.3: Find numbers whose "weight" is 1
+        foreach (string prime in primes)
+        {
+            if (DigitWeight(int.Parse(prime)) == 1)
+            {
+                result.WriteLine(prime);
+            }
+        }
+
+        Console.WriteLine(DigitWeight(343));
+        result.Close();
+    }
+}
