@@ -1,0 +1,18 @@
+body{
+    background-color: skyblue;
+}
+div#SVG{
+    height: 500px;
+    width: 500px;
+    background-color: aliceblue;
+}
+div#alicja{
+    position: absolute;
+    right: 300px;
+    top: 8px;
+}
+div#elfaria{
+    position: absolute;
+    right: 300px;
+    top: 400px;
+}
