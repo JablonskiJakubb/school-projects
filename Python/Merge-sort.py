@@ -15,6 +15,18 @@ def merge(t1, t2):
     result.extend(t2[j:])
     return result
 
+# while i < n1 and j < n2:
+#         if t1[i] < t2[j]:
+#             result.append(t1[i])
+#             i += 1
+#         else:
+#            result.append(t2[j])
+#             j += 1
+# should the value on t1[0] be smaller than the value on t2[0] it adds the value of t1[0] to the result
+# next it compares t1[1] to t2[0]
+# in case if t2[0] being smaller than t1[0] its the other way around
+# it would next compare t1[0] to t2[1]
+
 def merge_sort(t):
     n = len(t)
     if n > 1:
