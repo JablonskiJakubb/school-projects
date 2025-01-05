@@ -60,28 +60,3 @@ t = [9, 4, 1, 3, 8, 7, 0, 6, 2, 5]
 
 
 
-# Reading data from a file
-t = []
-with open("sequences.txt", 'r') as file:
-    for line in file:
-        line = line.strip()
-        t.append(line)
-file.close()
-
-# Writing results to a file
-with open("results.txt", "w") as file:
-    for i in range(len(t) - 1):
-        result = merge_sort(t[i])
-        file.write(" ".join(map(str, result)))
-
-# Generating a list of random numbers
-import random
-random_numbers = [random.randint(1, 1000000) for _ in range(1000000)]
-
-# Sorting the numbers using merge sort
-sorted_numbers = merge_sort(random_numbers)
-
-# Writing the sorted numbers to a new file
-with open('results_3.txt', 'w') as file:
-    for number in sorted_numbers:
-        file.write(f"{number}\n")
