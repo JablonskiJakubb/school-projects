@@ -27,6 +27,9 @@ def merge(t1, t2):
 # in case if t2[0] being smaller than t1[0] its the other way around
 # it would next compare t1[0] to t2[1]
 
+
+
+
 def merge_sort(t):
     n = len(t)
     if n > 1:
@@ -36,12 +39,31 @@ def merge_sort(t):
         return merge(left, right)
     return t
 
-# Input sequence from the user
-sequence = input("Enter a sequence: ")
-t = list(map(int, sequence.split()))
-print(t)
-t = merge_sort(t)
-print(t)
+
+t = [9, 4, 1, 3, 8, 7, 0, 6, 2, 5]
+
+
+# the len of this table is 10
+# therefore middle is 4  | 10 - 1 = 9 | 9 // 2 = 4
+# left is t[:5] | values from the indexes 0 trough 5 of table t | left1_1 = [9,4,1,3,8]
+# right is t[5:] | values from the indexes 5 through 10 (len of t) of table t | right_2_1 = [7,0,6,2,5]
+# it begins to split up into two diffrent uses of the merge sort algorithm
+# merge_sort(temp1) gives an output of next two temps until the len of both the temps is equal to 1
+# then and only then it merges the temps one by one until all of them are one sorted table
+# example below
+# ---------------------------------------------------
+# ms - merge_sort | l - left | r - right | ms_l_l - merge sort of the left part of the left part
+# ---------------------------------------------------
+# 9 4 1 3 8 7 0 6 2 5
+# ms_l(9 4 1 3 8) | ms_r(7 0 6 2 5)
+# ms_l-l(9 4) | ms_l-r(1 3 8)       ms_l-l = 4 9
+# ms(9 4) = 4 9
+# to be continued.
+#
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 # Reading data from a file
 t = []
