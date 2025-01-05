@@ -5,10 +5,12 @@ def merge(t1, t2):
     i = 0
     j = 0
     while i < n1 and j < n2:
+        # n1 > i not n1 >= i or n < i, same goes for n2
         if t1[i] < t2[j]:
             result.append(t1[i])
             i += 1
         else:
+            # make sure that this is an else and not an if.
             result.append(t2[j])
             j += 1
     result.extend(t1[i:])
@@ -36,7 +38,9 @@ def merge_sort(t):
         middle = (n-1) // 2
         left = merge_sort(t[:middle+1])
         right = merge_sort(t[middle+1:])
+        # both left and right must be t[middle+1] with their respective placement of the colon otherwise wont work obviously
         return merge(left, right)
+        # remember this return, crucial to make the algorithm function 
     return t
 
 # example of a table easy to remember
