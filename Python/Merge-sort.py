@@ -39,28 +39,19 @@ def merge_sort(t):
         return merge(left, right)
     return t
 
-
+# example of a table easy to remember
 t = [9, 4, 1, 3, 8, 7, 0, 6, 2, 5]
 
 
 # the len of this table is 10
 # therefore middle is 4  | 10 - 1 = 9 | 9 // 2 = 4
-# left is t[:5] | values from the indexes 0 trough 5 of table t | left1_1 = [9,4,1,3,8]
-# right is t[5:] | values from the indexes 5 through 10 (len of t) of table t | right_2_1 = [7,0,6,2,5]
-# it begins to split up into two diffrent uses of the merge sort algorithm
+# left is t[:5] | values from the indexes 0 trough 5 of table t | left = [9,4,1,3,8]
+# right is t[5:] | values from the indexes 5 through 10 (len of t) of table t | right = [7,0,6,2,5]
+# it begins to split up into two diffrent uses of the merge sort algorithm (both left and right get split into two more left and rights.
+# basically division by two so we have: 1 whole table | 1/2 of the table | 1/4 of the table
+# this continues until there are no more than three numbers in a single segment
 # merge_sort(temp1) gives an output of next two temps until the len of both the temps is equal to 1
 # then and only then it merges the temps one by one until all of them are one sorted table
-# example below
-# ---------------------------------------------------
-# ms - merge_sort | l - left | r - right | ms_l_l - merge sort of the left part of the left part
-# ---------------------------------------------------
-# 9 4 1 3 8 7 0 6 2 5
-# ms_l(9 4 1 3 8) | ms_r(7 0 6 2 5)
-# ms_l-l(9 4) | ms_l-r(1 3 8)       ms_l-l = 4 9
-# ms(9 4) = 4 9
-# to be continued.
-#
-
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
