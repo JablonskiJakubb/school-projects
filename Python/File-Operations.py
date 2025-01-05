@@ -10,11 +10,12 @@ with open("sequences.txt", 'r') as file:
         t.append(line)
 file.close()
 
-# Writing results to a file
-with open("results.txt", "w") as file:
-    for i in range(len(t) - 1):
-        result = ... # whatever you'd like to write in the file
-        file.write(" ".join(map(str, result)))
+# Writing a list into to a file
+lines = ["First line", "Second line", "Third line"]
+
+# Open the file and write the list of lines
+with open("output.txt", "w") as file:
+    file.writelines(f"{lines} ")
 
 #-----------
 # exercises
