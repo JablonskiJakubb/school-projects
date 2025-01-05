@@ -1,3 +1,25 @@
+#----------
+# basics
+#----------
+
+# Reading data from a file
+t = []
+with open("sequences.txt", 'r') as file:
+    for line in file:
+        line = line.strip()
+        t.append(line)
+file.close()
+
+# Writing results to a file
+with open("results.txt", "w") as file:
+    for i in range(len(t) - 1):
+        result = ... # whatever you'd like to write in the file
+        file.write(" ".join(map(str, result)))
+
+#-----------
+# exercises
+#-----------
+
 # Exercise 1
 first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
