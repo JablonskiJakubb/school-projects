@@ -19,3 +19,8 @@ input_string = "abcdef"
 result = get_subsequence(input_string)
 print(f"Input string: {input_string}")
 print(f"Subsequence: {result}")
+
+#------------------------------------------------------------------------------------------------------------
+# exercises
+#------------------------------------------------------------------------------------------------------------
+# Exercise: Longest Increasing Subsequence (LIS)
