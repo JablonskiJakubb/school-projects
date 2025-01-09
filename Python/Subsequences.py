@@ -45,3 +45,18 @@ print(LICS(num))
 # Output: 3
 
 
+# Exercise: Check If Is Subsequence
+def check_if_subsequence(s, t):
+    index = 0
+    for char in s:
+        # Find the character in 't' starting from the current index
+        while index < len(t) and t[index] != char:
+            index += 1
+        # If we reach the end of 't' without finding the character, return False
+        if index == len(t):
+            return False
+        # Move to the next character in 't' for the next iteration
+        index += 1
+    return True
+
+
