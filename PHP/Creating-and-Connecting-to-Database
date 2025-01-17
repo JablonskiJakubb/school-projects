@@ -1,34 +1,34 @@
 <?php
-// Dane do połączenia z serwerem MySQL
+// Data for connecting to the MySQL server
 $servername = "localhost";
-$username = "root"; // Zmień, jeśli używasz innego użytkownika
-$password = ""; // Dodaj hasło, jeśli jest wymagane
+$username = "root"; // Change if you are using a different user
+$password = ""; // Add a password if required
 
-// Pobranie danych z formularza
+// Retrieving data from the form
 $dbname = $_POST['dbname'];
 $field1 = $_POST['field1'];
 $field2 = $_POST['field2'];
 
-// Połączenie z serwerem MySQL
+// Connecting to the MySQL server
 $conn = new mysqli($servername, $username, $password);
 
-// Sprawdzenie połączenia
+// Checking the connection
 if ($conn->connect_error) {
-    die("Połączenie nieudane: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// Tworzenie bazy danych
+// Creating a database
 $sql = "CREATE DATABASE $dbname";
 if ($conn->query($sql) === TRUE) {
-    echo "Baza danych '$dbname' została utworzona.<br>";
+    echo "Database '$dbname' has been created.<br>";
 } else {
-    die("Błąd przy tworzeniu bazy danych: " . $conn->error);
+    die("Error creating database: " . $conn->error);
 }
 
-// Połączenie z nowo utworzoną bazą danych
+// Connecting to the newly created database
 $conn->select_db($dbname);
 
-// Tworzenie tabeli
+// Creating a table
 $tableName = "moja_tabela";
 $sql = "CREATE TABLE $tableName (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -36,11 +36,11 @@ $sql = "CREATE TABLE $tableName (
     $field2 VARCHAR(255) NOT NULL
 )";
 if ($conn->query($sql) === TRUE) {
-    echo "Tabela '$tableName' została utworzona w bazie danych '$dbname'.";
+    echo "Table '$tableName' has been created in the database '$dbname'.";
 } else {
-    die("Błąd przy tworzeniu tabeli: " . $conn->error);
+    die("Error creating table: " . $conn->error);
 }
 
-// Zamknięcie połączenia
+// Closing the connection
 $conn->close();
 ?>
