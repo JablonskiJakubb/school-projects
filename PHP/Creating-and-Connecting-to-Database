@@ -1,0 +1,46 @@
+<?php
+// Dane do połączenia z serwerem MySQL
+$servername = "localhost";
+$username = "root"; // Zmień, jeśli używasz innego użytkownika
+$password = ""; // Dodaj hasło, jeśli jest wymagane
+
+// Pobranie danych z formularza
+$dbname = $_POST['dbname'];
+$field1 = $_POST['field1'];
+$field2 = $_POST['field2'];
+
+// Połączenie z serwerem MySQL
+$conn = new mysqli($servername, $username, $password);
+
+// Sprawdzenie połączenia
+if ($conn->connect_error) {
+    die("Połączenie nieudane: " . $conn->connect_error);
+}
+
+// Tworzenie bazy danych
+$sql = "CREATE DATABASE $dbname";
+if ($conn->query($sql) === TRUE) {
+    echo "Baza danych '$dbname' została utworzona.<br>";
+} else {
+    die("Błąd przy tworzeniu bazy danych: " . $conn->error);
+}
+
+// Połączenie z nowo utworzoną bazą danych
+$conn->select_db($dbname);
+
+// Tworzenie tabeli
+$tableName = "moja_tabela";
+$sql = "CREATE TABLE $tableName (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    $field1 VARCHAR(255) NOT NULL,
+    $field2 VARCHAR(255) NOT NULL
+)";
+if ($conn->query($sql) === TRUE) {
+    echo "Tabela '$tableName' została utworzona w bazie danych '$dbname'.";
+} else {
+    die("Błąd przy tworzeniu tabeli: " . $conn->error);
+}
+
+// Zamknięcie połączenia
+$conn->close();
+?>
