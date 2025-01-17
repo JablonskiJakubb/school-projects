@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tworzenie Bazy Danych i Tabeli</title>
+</head>
+<body>
+    <h2>Tworzenie bazy danych i tabeli</h2>
+    <form action="create_database.php" method="POST">
+        <label for="db_name">Nazwa bazy danych:</label><br>
+        <input type="text" id="db_name" name="db_name" required><br><br>
+
+        <label for="column1_name">Nazwa pierwszego pola:</label><br>
+        <input type="text" id="column1_name" name="column1_name" required><br><br>
+
+        <label for="column2_name">Nazwa drugiego pola:</label><br>
+        <input type="text" id="column2_name" name="column2_name" required><br><br>
+
+        <input type="submit" value="Utwórz bazę danych i tabelę">
+    </form>
+</body>
+</html>
