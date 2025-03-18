@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace Powtoreczka1298_098013098_132
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+           
+
+
+
+            string liczba = TextBox.Text;
+            if (!Regex.IsMatch(liczba, @"^\d+$"))
+            {
+                MessageBox.Show("Wpisz tylko cyfry!");
+                return;
+            }
+            int dlugosc = liczba.Length;
+            int wynik = 0;
+            for(int i = 0; i < dlugosc; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    wynik += liczba[i];
+                }
+                else
+                {
+                    wynik -= liczba[i];
+                }
+            }
+            if (wynik % 11 == 0) { Label.Text = "tak spelnia warunki"; }
+            else { Label.Text = "nie spelnia warunkow"; }
+            
+        }
+
+    }
+}
