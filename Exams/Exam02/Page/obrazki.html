@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty Obrazu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <header id="baner"> <h2> Efekty na obrazach</h2></header>
+    <div id="jed"> 
+        <img src="pszczola.jpg" id="pszczola" alt="Pszczoła na fioletowym kwiatku">
+        <br> 
+        <form>
+            <input type="radio" name="grupa" id="blur"> Blur <br>
+            <input type="radio" name="grupa" id="sepia"> Sepia <br>
+            <input type="radio" name="grupa" id="negatyw"> Negatyw <br>
+        </form>
+        <input type="button" value="Zastosuj" id="button_one">
+        </div>
+    <div id="dwa">
+        <img src="pomarancza.jpg" id="drzewo" alt="Drzewo Pomaranczy">
+        <br>
+        <input type="button" value="Kolorowy" id="button_two">    <input type="button" value="Czarno-biały" id="button_three">
+    </div>
+    <div id="trz">
+        <img src="owoce.jpg" id="owoce" alt="Kosz pełen owoców">
+        <br>
+        <input type="range" min="0" max="100" value="100" id="range_one">
+        <br>
+        <input type="button" value="Zastosuj" id="button_four">
+    </div>
+    <div id="czt">
+        <img src="zolw.jpg" id="zolw" alt="Żółw w wodzie">
+        <br>
+        <input type="range" min="0" max="250" id="range_two">
+        <br>
+        <input type="button" value="Zastosuj" id="button_five">
+    </div>
+    <footer id="stopka"><p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu.</a></p><p>strone twrorzył: Jakub Jabłoński</p></footer>
+</body>
+</html>
