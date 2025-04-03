@@ -1,0 +1,93 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#motor{
+    display: block;
+    left: 15%;
+    width: 70%;
+    position: relative;
+}
+#baner{
+    height: 150px;
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    margin: -8px;
+    justify-content: center;
+    justify-items: center;
+    font-size: 150%;
+    padding: 10px;
+    background-color: rgba(69, 120, 169, 0.9);
+}
+#lewy{
+    position: fixed;
+    justify-content: center;
+    top: 200px;
+    height: 600px;
+    width: 75%;
+    margin: 2%;
+    font-size: 120%;
+    background-color: rgba(0, 100, 0, 0.6);
+    box-shadow: 10px 10px 7px dimgray;
+    overflow: auto;
+}
+#prawy_jeden{
+    right: 5%;
+    position: fixed;
+    justify-content: center;
+    top: 200px;
+    height: 300px;
+    width: 15%;
+    margin: 1%;
+    background-color: rgba(0, 100, 0, 0.6);
+    box-shadow: 10px 10px 7px dimgray;
+}
+#prawy_dwa{
+    right: 5%;
+    position: fixed;
+    justify-content: center;
+    top: 550px;
+    height: 300px;
+    width: 15%;
+    margin: 1%;
+    background-color: rgba(0, 100, 0, 0.6);
+    box-shadow: 10px 10px 7px dimgray;
+}
+#stopka{
+    position: fixed;
+    bottom: 0px;
+    height: 20px;
+    width: 100%;
+    margin: -6px;
+    padding: 10px;
+    background-color: rgba(60, 120, 169, 0.9);
+    text-align: left;
+}
+
+#napisjeden{
+    font-style: italic;
+    position: relative;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#napisdwa{
+    font-style: italic;
+    position: relative;
+    color: white;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+#opis:hover{
+    background-color: lightgreen;
+}
+#naglowek, #opis{
+    font-size: 20px;
+}
