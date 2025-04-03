@@ -1,0 +1,49 @@
+body{
+    font-family: Helvetica, sans-serif, Arial;
+    display: block;
+}
+footer, header{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    
+}
+#menu{
+    align-items: center;
+    text-align: center;
+    background-color: peru;
+    width: 80%;
+    height: 40px;
+    padding-top: 20px;
+}
+#lewy{
+    width: 80%;
+    height: 700px;
+    font-size: 120%;
+    overflow: auto;
+    background-color: white;
+}
+#prawy{
+    position:absolute;
+    background-color: peru;
+    color: white;
+    width: 20%;
+    height: 760px;
+    right: 8px;
+    top: 102px;
+    
+}
+a{
+    text-decoration: none;
+    color: #ddd;
+    padding-left: 90px;
+    font-size: 140%;
+}
+a:hover{
+    color: white;
+}
+img{
+    float: left;
+    margin: 30px;
+}
