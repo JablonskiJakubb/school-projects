@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Grade Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-page">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="login-error"></p>
+  </div>
+
+  <div id="dashboard" style="display: none;">
+    <h2>Witamy panią profesor!</h2>
+
+    <div class="dashboard-content">
+      <div class="student-list-section">
+        <h3>Uczniowie z plusami</h3>
+        <ul id="student-list"></ul>
+      </div>
+
+      <div class="add-student-section">
+        <h3>Dodaj ucznia z plusem</h3>
+        <input type="text" id="new-student-name" placeholder="Imie ucznia" />
+        <button onclick="addStudent()">Dodaj</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
