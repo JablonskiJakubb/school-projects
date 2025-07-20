@@ -9,6 +9,11 @@ body {
     background-color: brown;
     margin: 0;
     padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .container {
@@ -92,4 +97,9 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
     text-align: center;
+}
+aside{
+    position: relative;
+    bottom: 10px;
+    float: right;
 }
