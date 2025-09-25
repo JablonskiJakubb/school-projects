@@ -1,0 +1,113 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static ConsoleApp3.Program;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        public class Room
+        {
+            public int RoomNr { get; private set; }
+            public int BedNr { get; private set; }
+
+            public Room(int roomNr, int bedNr)
+            {
+                RoomNr = roomNr;
+                BedNr = bedNr;
+            }
+
+            public virtual string Opis()
+            {
+                return "To jest ogólny opis pokoju.";
+            }
+        }
+
+        public class StandardRoom : Room
+        {
+            public bool HasView { get; private set; }
+
+            public StandardRoom(bool hasView, int roomNr, int bedNr) : base(roomNr, bedNr)
+            {
+                HasView = hasView;
+            }
+
+            public override string Opis()
+            {
+                string hasView2 = HasView ? "Tak" : "Nie";
+                return $"Pokój standardowy numer: {RoomNr} ma {BedNr} miejsc. Widok: {hasView2}.";
+            }
+        }
+
+        public class Apartment : Room
+        {
+            int apartmentNr { get; set; }
+            int floor { get; set; }
+
+            public Apartment(int apartmentNr, int floor, int roomNr, int bedNr) : base(roomNr, bedNr)
+            {
+                this.apartmentNr = apartmentNr;
+                this.floor = floor;
+            }
+            public override string Opis()
+            {
+                return $"Apartament numer: {apartmentNr} na piętrze {floor}, ma {BedNr} miejsc.";
+            }
+        }
+        public class FamilyRoom : Room
+        {
+            private int numberOfChildren;
+            private bool hasCrib;
+
+            public FamilyRoom(int roomNr, int bedNr, int numberOfChildren, bool hasCrib) : base(roomNr, bedNr)
+            {
+                this.numberOfChildren = numberOfChildren;
+                this.hasCrib = hasCrib;
+            }
+
+            public int GetNumberOfChildren()
+            {
+                return numberOfChildren;
+            }
+
+            public void SetNumberOfChildren(int value)
+            {
+                if (value >= 0)
+                    numberOfChildren = value;
+            }
+
+            public bool GetHasCrib()
+            {
+                return hasCrib;
+            }
+
+            public void SetHasCrib(bool value)
+            {
+                hasCrib = value;
+            }
+
+            public override string Opis()
+            {
+                string cribText = hasCrib ? "Tak" : "Nie";
+                return $"Pokój rodzinny numer: {RoomNr}, dla {BedNr} osób. Możliwe noclegi dla {numberOfChildren} dzieci. Łóżeczko: {cribText}.";
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            List<Room> rooms = new List<Room>();
+
+            rooms.Add(new StandardRoom(true, 101, 2));
+            rooms.Add(new Apartment(1, 3, 201, 4));
+            rooms.Add(new FamilyRoom(301, 5, 2, true));
+
+            foreach (Room room in rooms)
+            {
+                Console.WriteLine(room.Opis());
+            }
+        }
+    }
+}
