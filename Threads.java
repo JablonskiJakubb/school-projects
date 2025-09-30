@@ -15,6 +15,7 @@ class T{
 		for(int i = 0; i < T.length; i++) {
 			System.out.print(T[i] + " ");
 		}
+		System.out.println();
 	}
 }
 
@@ -25,33 +26,39 @@ public class program {
 		Thread T1 = new Thread(() -> {
 			for (int i = 0; i < t.getT().length; i++) {
 				t.wstaw(i, 1);
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 		});
 		Thread T2 = new Thread(() -> {
 			for (int i = t.getT().length-1; i >= 0; i--) {
 				t.wstaw(i, 2);
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 		});
 		Thread T3 = new Thread(() -> {
-			t.wyswietl();
-			try {
-				Thread.sleep(800);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			while (true)
+			{
+				t.wyswietl();
+				try {
+					Thread.sleep(800);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
+			
 		});
 		T1.start();
 		T2.start();
