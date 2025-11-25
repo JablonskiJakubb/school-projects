@@ -51,10 +51,40 @@ fun main() {
         }
         return wynik
     }
-    f1()
-    println(f2(12,8))
-    println(f3(6))
-   	println(f4(arrayOf(12,10,5,25,2,57)).joinToString(", "))
-    println(f5(3,arrayOf(4,2,5,-2)))
+    fun f6() : Int{
+        var suma = 0
+        for(i in 10 until 100){
+            suma += i
+        }
+        return suma
+    }
+	fun f7(a : Int) : Int{
+        var x = a
+        var suma = 0
+        while (x >= 1){
+            suma += x % 10
+            x = x / 10
+        }
+        return suma
+    }    
+	fun f8(n : Int) : Array<Int>{
+        var T = arrayOf(1)
+        for (i in 2 until n){
+            if (n % i == 0){
+                T = T + i
+            }
+            
+        }
+        return T
+        
+    }
+    fun f9(n: Int): MutableList<Int> {
+        val T = mutableListOf(0, 1)
+        for (i in 2 until n) {
+            val suma = T[i - 2] + T[i - 1]
+            T.add(suma)
+    	}
+    	return T
+	}	
 }
 
