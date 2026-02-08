@@ -1,0 +1,3 @@
+[submodule "external/T4E4"]
+	path = external/T4E4
+	url = https://github.com/PanInf/TE4E.git
