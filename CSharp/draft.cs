@@ -88,3 +88,83 @@ namespace sortowanie
 // Pomoc z zewnątrz: 20% (przypominanie i znajdywane błedów)
 // Czego nauczyłeś się wykonując to zadanie?: przypomnialem sobie bąbelkowe
 // wynik na egzaminie: 35/100 (pozapominalem wiele przez swieta)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace zadanie2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                Console.WriteLine("Podaj liczbę: ");
+                int n = int.Parse(Console.ReadLine());
+                fibo(n);
+                Console.WriteLine("Czy chcesz wygenerowac kolejny ciąg? Y/N");
+                string input = Console.ReadLine();
+                if (input == "n" || input == "N")
+                {
+                    break;
+                }
+            } while (true);
+            
+
+
+        }
+        static void fibo(int n)
+        {
+            Console.WriteLine("=== FIBONACCI I LICZBY PIERWSZE ===");
+            int suma = 0;
+            int f = 0;
+            int x = 1;
+            for (int i = 0; i < n; i++)
+            {
+                if (czyPierwsza(x))
+                {
+                    Console.WriteLine(x + "[PIERWSZA]");
+                    suma += 1;
+                }
+                else
+                {
+                    Console.WriteLine(x);
+                }
+                int temp = f + x;
+                f = x;
+                x = temp;
+                
+                
+
+            }
+            Console.WriteLine("=== STATYSTYKI ===");
+            Console.WriteLine($"liczb pierwszych jest: {suma} / {n} ({suma *100/ n}%)");
+        }
+        static bool czyPierwsza(int n)
+        {
+            int dzielniki = 0;
+            for (int i = 2; i < n / 2; i++)
+            {
+                if (n % i == 0)
+                {
+                    dzielniki++;
+                }
+            }
+            if (dzielniki > 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        
+    }
+}
+
+// Ile czasu: 1H
+// Pomoc z zewnątrz: 20% (znajdywane błedów)
+// Czego nauczyłeś się wykonując to zadanie?: nic nowego
+// wynik na egzaminie: 50/100 (pozapominalem wiele przez swieta)
