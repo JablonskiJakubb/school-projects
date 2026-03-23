@@ -1,0 +1,123 @@
+CEL:
+Celem zadania jest stworzenie prostej aplikacji Android w języku Java, która umożliwia wprowadzanie danych użytkownika oraz zapisywanie ich w lokalnej bazie danych przy użyciu biblioteki Room. Aplikacja powinna wykorzystywać wzorzec MVVM oraz ręczne wstrzykiwanie zależności (Pure DI – bez użycia frameworków typu Hilt/Dagger).
+
+WYMAGANIA FUNKCJONALNE:
+
+1. EKRAN FORMULARZA
+   Aplikacja powinna zawierać jeden ekran z formularzem:
+
+* Pole tekstowe: Imię
+* Pole tekstowe: Nazwisko
+* Pole tekstowe: Email
+* Przycisk: "Zapisz"
+* Lista zapisanych użytkowników
+
+2. WALIDACJA
+
+* Wszystkie pola muszą być wypełnione
+* Email musi zawierać znak "@"
+* W przypadku błędu należy wyświetlić komunikat
+
+3. BAZA DANYCH (ROOM)
+   Należy utworzyć:
+
+* Encję User:
+
+  * id (int, autoGenerate, PrimaryKey)
+  * firstName (String)
+  * lastName (String)
+  * email (String)                
+
+* Interfejs UserDao:
+
+  * insert(User user)
+  * getAll() -> LiveData<List<User>>
+
+* Klasę AppDatabase:
+
+  * rozszerza RoomDatabase
+  * zawiera metodę userDao()
+
+4. ARCHITEKTURA (MVVM)
+   Aplikacja powinna być podzielona na warstwy:
+
+* UI (Activity)
+* ViewModel
+* Repository
+* Data (Room)
+
+5. VIEWMODEL
+   Klasa: UserViewModel
+
+* przechowuje LiveData<List<User>>
+* posiada metodę addUser(...)
+* komunikuje się z repozytorium
+* nie zawiera referencji do Activity
+
+6. REPOZYTORIUM
+   Klasa: UserRepository
+
+* przyjmuje UserDao w konstruktorze
+* odpowiada za operacje na danych
+* udostępnia metodę insert(User)
+* udostępnia metodę getAllUsers()
+
+7. PURE DEPENDENCY INJECTION (BEZ FRAMEWORKÓW)
+   Zależności muszą być przekazywane ręcznie przez konstruktory.
+
+Przykładowy przepływ:
+AppDatabase -> UserDao -> UserRepository -> ViewModel -> Activity
+
+8. UI I OBSERWACJA DANYCH
+
+* Activity obserwuje LiveData z ViewModel
+* Po kliknięciu "Zapisz":
+
+  * dane trafiają do ViewModel
+  * następnie do Repository
+  * następnie do Room
+  * Lista użytkowników aktualizuje się automatycznie
+
+STRUKTURA PROJEKTU:
+
+* data/
+
+  * User.java (encja Room)
+  * UserDao.java (DAO)
+  * AppDatabase.java (RoomDatabase)
+
+* repository/
+
+  * UserRepository.java
+
+* viewmodel/
+
+  * UserViewModel.java
+  * UserViewModelFactory.java (do przekazania zależności)
+
+* ui/
+
+  * MainActivity.java
+  * UserAdapter.java (RecyclerView)
+
+* di/
+
+  * AppContainer.java (ręczne tworzenie zależności)
+  * Injector.java (opcjonalnie, pomocnicza klasa)
+
+ZALECANE FRAMEWORKI I BIBLIOTEKI:
+
+* AndroidX Lifecycle (ViewModel, LiveData)
+* Room (androidx.room)
+* Koin (dla chętnych)
+
+ZADANIA DODATKOWE (opcjonalne):
+
+* usuwanie użytkownika
+* edycja użytkownika
+* walidacja rozszerzona (np. regex dla email)
+* testy jednostkowe dla repozytorium
+
+
+
+
